@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 
 namespace Lab3_Test
 {
@@ -10,7 +11,7 @@ namespace Lab3_Test
         }
 
         [Test]
-        public void AddTest()
+        public void CalcTest()
         {
             const double r = 5;
             const double alfa = 180;
@@ -19,6 +20,15 @@ namespace Lab3_Test
             var result = Lab3.Lib.Circular_Sector.Calc(r, alfa);
 
             Assert.AreEqual(expected, result, 0.0001);
+        }
+        [Test]
+        public void ExceptionTest()
+        {
+            const double r = 0;
+            const double alfa = -180;
+
+
+            Assert.Throws<Exception>(() => Lab3.Lib.Circular_Sector.Calc(r, alfa));
         }
     }
 }
