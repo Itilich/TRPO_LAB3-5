@@ -1,0 +1,23 @@
+image: mcr.microsoft.com/dotnet/sdk:8.0
+
+variables:
+  publishDir: /builds/$CI_PROJECT_PATH
+  projectName: TRPO_Lab3
+
+stages:
+  - test
+  - publish
+
+test_job:
+  stage: test
+  script:
+    - dotnet test Lab3.Test
+
+publish_win:
+  stage: publish
+  script:
+    - dotnet publish Lab3.ConsoleApp -c Release -r win-x64 -o ./$projectName.win-x64
+  artifacts:
+    name: $projectName.win-x64
+    paths: 
+        - $publishDir/$projectName.win-x64
