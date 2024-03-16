@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab4.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800">
+        Title="Расчёт площади кругового сектора" Height="300" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="37*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox HorizontalAlignment="Left" Margin="10,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Здравствуйте! Это приложение для расчета площади кругового сектора" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="410" Height="26"/>
+        <Label Content="Введите радиус кругового сектора:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="204" Height="26"/>
+        <Label Content="Введите центральный угол кругового сектора:" HorizontalAlignment="Left" Margin="10,95,0,0" VerticalAlignment="Top" Width="266" Height="26"/>
+        <Label Content="Ответ:" HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="70,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.475,0.503"/>
+        <Label Content="Используемая формула:" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Width="147"/>
+        <TextBox HorizontalAlignment="Left" Margin="10,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Grid.Column="1" Content="Схема на основе введённых данных" HorizontalAlignment="Left" Margin="87,10,0,0" VerticalAlignment="Top" Width="215"/>
 
     </Grid>
 </Window>
