@@ -13,12 +13,12 @@ namespace Lab3.Lib
         ///Для формулы необходимо знать диаметр/радиус и центральный угол
         public static double Calc(double r, double alfa)
         {
-            if (r <= 0)
+            if (r < 0)
             {
                 throw new Exception("Радиус должен быть задан положительным числом");
 
             }
-            if (alfa <= 0)
+            if (alfa < 0)
             {
                 throw new Exception("Угол должен быть задан положительным числом");
             }

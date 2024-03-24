@@ -8,7 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\сектор.png" />
+    <None Remove="img\формула.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Lab3.Lib\Lab3.Lib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\сектор.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\формула.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
