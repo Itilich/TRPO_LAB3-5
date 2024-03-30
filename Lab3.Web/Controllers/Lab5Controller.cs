@@ -2,7 +2,7 @@
 
 namespace Lab3.Web.Controllers
 {
-    public class Controller : Microsoft.AspNetCore.Mvc.Controller
+    public class Lab5Controller : Microsoft.AspNetCore.Mvc.Controller
     {
         [HttpGet]
         public IActionResult Index()
