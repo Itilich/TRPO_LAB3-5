@@ -1,18 +1,45 @@
-html {
-  font-size: 14px;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+body{
+    background: silver;
+
+}
+header {
+    width: 80%;
+    padding: 30px 10%;
+    color: aquamarine;
+    display: flex;
+    background: black;
+}
+header .logo{
+    font-weight: 600;
+    font-size: 20px;
+    background: black;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+header nav a { 
+    font-size: 30px;
+    color: aquamarine;
+    margin-left: 30px;
+}
+header nav a:hover {
+    text-decoration: underline;
+    }
+
+main{
+    width: 80%;
+    padding: 30px 10%;
+    margin: 50px;
 }
 
-body {
-  margin-bottom: 60px;
+footer{
+    margin-top: 150px;
+    text-align: center;
+    width: 100%;
+    padding: 25px 0;
+    color: aquamarine;
+    background: black;
 }

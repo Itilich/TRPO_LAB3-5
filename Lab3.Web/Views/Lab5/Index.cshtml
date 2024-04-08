@@ -1,6 +1,23 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-    ViewData["Title"] = "Calculate";
+﻿@{
+    ViewData["Title"] = "Расчёт площади кругового сектора";
 }
+<h1>Расчёт площади кругового сектора</h1>
+@model SectorModel
+<div class="form-container">
+<form method="post">
+    <div>
+        <label for="R">Радиус</label>
+        <input type="number" name="R">
+    </div>
+    <div>
+        <label for="alfa">Центральный угол</label>
+        <input type="number" name="alfa">
+    </div>
+    <button type="submit">Расчёт</button>
+</form>
+
+@if (ViewBag.Result != null)
+{
+    <div>Результат: @ViewBag.Result</div>
+}
+</div>

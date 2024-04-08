@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Lab3.Lib;
+using Lab3.Web.Models;
 
 namespace Lab3.Web.Controllers
 {
@@ -11,8 +13,10 @@ namespace Lab3.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(IFormCollection collection)
+        public IActionResult Index(double R, double alfa)
         {
+            double result = Circular_Sector.Calc(R, alfa);
+            ViewBag.Result = result;
             return View();
         }
 
